@@ -5,7 +5,7 @@
 
 # load the grocery data into a sparse matrix
 library(arules)
-groceries <- read.transactions("groceries.csv", sep = ",")
+groceries <- read.transactions("Chapter 08/groceries.csv", sep = ",")
 summary(groceries)
 
 # examine the long format (without decoding) to see the raw item IDs
@@ -55,7 +55,7 @@ berryrules <- subset(groceryrules, items %in% "berries")
 inspect(berryrules)
 
 # writing the rules to a CSV file
-write(groceryrules, file = "groceryrules.csv",
+write(groceryrules, file = "Chapter 08/groceryrules.csv",
       sep = ",", quote = TRUE, row.names = FALSE)
 
 # converting the rule set to a data frame

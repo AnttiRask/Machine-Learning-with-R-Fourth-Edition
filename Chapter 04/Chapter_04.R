@@ -4,7 +4,7 @@
 ## Step 2: Exploring and preparing the data ---- 
 
 # read the sms data into the sms data frame
-sms_raw <- read.csv("sms_spam.csv")
+sms_raw <- read.csv("Chapter 04/sms_spam.csv")
 
 # examine the structure of the sms data
 str(sms_raw)

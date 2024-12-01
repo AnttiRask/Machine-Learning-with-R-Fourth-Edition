@@ -4,7 +4,7 @@
 
 ## Understanding regression ----
 ## Example: Space Shuttle Launch Data ----
-launch <- read.csv("challenger.csv")
+launch <- read.csv("Chapter 06/challenger.csv")
 
 # estimate beta manually
 b <- cov(launch$temperature, launch$distress_ct) / var(launch$temperature)
@@ -45,7 +45,7 @@ model
 
 ## Example: Predicting Medical Expenses ----
 ## Step 2: Exploring and preparing the data ----
-insurance <- read.csv("autoinsurance.csv", stringsAsFactors = TRUE)
+insurance <- read.csv("Chapter 06/autoinsurance.csv", stringsAsFactors = TRUE)
 str(insurance)
 
 # summarize the charges variable
@@ -129,7 +129,7 @@ predict(ins_model2,
 
 ## Predicting Insurance Policyholder Churn with Logistic Regression ----
 
-churn_data <- read.csv("insurance_churn.csv")
+churn_data <- read.csv("Chapter 06/insurance_churn.csv")
 
 prop.table(table(churn_data$churn)) # see the % of churn
 
@@ -141,7 +141,7 @@ churn_model <- glm(churn ~ . -member_id, data = churn_data,
 summary(churn_model)
 
 # read the test set
-churn_test <- read.csv("insurance_churn_test.csv")
+churn_test <- str(read.csv("Chapter 06/insurance_churn_test.csv"))
 
 # make predictions on the test set
 churn_test$churn_prob <- predict(churn_model, churn_test,
@@ -175,7 +175,7 @@ sdr_b
 
 ## Example: Estimating Wine Quality ----
 ## Step 2: Exploring and preparing the data ----
-wine <- read.csv("whitewines.csv")
+wine <- read.csv("Chapter 06/whitewines.csv")
 
 # examine the wine data
 str(wine)

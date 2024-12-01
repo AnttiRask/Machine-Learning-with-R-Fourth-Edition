@@ -5,7 +5,7 @@
 
 ## Step 2: Exploring and preparing the data ----
 # read in data and examine structure
-concrete <- read.csv("concrete.csv")
+concrete <- read.csv("Chapter 07/concrete.csv")
 str(concrete)
 
 # custom normalization function
@@ -115,7 +115,7 @@ cor(strengths$pred_new, strengths$actual)
 
 ## Step 2: Exploring and preparing the data ----
 # read in data and examine structure
-letters <- read.csv("letterdata.csv", stringsAsFactors = TRUE)
+letters <- read.csv("Chapter 07/letterdata.csv", stringsAsFactors = TRUE)
 str(letters)
 
 # divide into training and test data
